@@ -1,0 +1,64 @@
+GET http://localhost:3004/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2JpbGUiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNzMxMzAzNzU4fQ.jKOCJxzRZ7cmMNvCDWtf1rKWkOkWZsUEhFgMqSBUHDc
+
+
+
+###
+GET http://localhost:3004/todos/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtb2JpbGUiOiIxMjM0NTY3ODkwIiwiaWF0IjoxNzMxMzAzNzU4fQ.jKOCJxzRZ7cmMNvCDWtf1rKWkOkWZsUEhFgMqSBUHDc
+
+
+###
+POST http://localhost:3004/todos/
+Content-Type: application/json
+
+{
+    "task":"Learn React",
+    "tag":"Education",
+    "priority":"high",
+    "status":"pending",
+    "date":"2015-12-11"
+}
+
+
+###
+POST http://localhost:3004/login/
+Content-Type: application/json
+
+{
+    "mobile": "1234567890",
+    "password": "9059"
+}
+###
+DELETE http://localhost:3004/delete-todos/
+###
+DELETE http://localhost:3004/delete-todo/
+Content-Type: application/json
+
+{
+"id":"1"
+}
+
+
+###
+DELETE http://localhost:3004/delete-users/
+
+###
+POST http://localhost:3004/register/
+Content-Type: application/json
+
+{
+    "name": "rahul",
+    "mobile": "1234567890",
+    "gender": "male",
+    "password": "9059",
+    "email": "rahul@gmail.com"
+}
+
+###
+PUT http://localhost:3004/todo/9d2b0eff-0ea4-4fea-902d-d9d6a0b78597
+Content-Type: application/json
+
+{
+    "task":"complete post and update apis"
+}
