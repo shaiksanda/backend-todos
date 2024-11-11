@@ -83,6 +83,10 @@ app.post("/login/",async (req, res) => {
 })
 
 
+app.get("/",(request,express.response)=>{
+  response.status(200).send("Welcome to my todo application")
+})
+
 app.get('/users/',authenticateToken, async (req, res) => {
   try {
     const [results] = await pool.query('SELECT * FROM users'); // Query the pizzas table
